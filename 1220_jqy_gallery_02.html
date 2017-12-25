@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1220_jqy_gallery_02</title>
+	<style>
+		img {
+			width: 100%;
+		}
+		#thumbs img{
+			width: 100px;
+		}
+		#gallery {
+			width: 600px;
+		}
+	</style>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$('#thumbs').find("img").click(function(){
+				let s = $(this).attr("src");
+				let start = s.slice(0,9);
+				let end = s.slice(10);
+				let final = start + end;
+				// console.log(final);
+				$('#gallery').find("img").attr("src",final);
+			})
+		})
+	</script>
+</head>
+<body>
+	<div id="gallery">
+		<img src="image/001.jpg" alt="">
+	</div>
+	<div id="thumbs">
+		<img src="image/001s.jpg" alt="">
+		<img src="image/002s.jpg" alt="">
+	</div>
+</body>
+</html>

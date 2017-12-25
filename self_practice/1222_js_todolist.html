@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ToDoList</title>
+</head>
+<body>
+	<input id="item">
+	<button id="bt">送出</button>
+	<ul id="todo"></ul>
+	
+	<script>
+
+
+		document.getElementById("bt").onclick = function(){
+			var li = document.createElement("li");
+			var listValue = document.getElementById("item").value;
+			var listText = document.createTextNode(listValue);
+			li.appendChild(listText);
+			document.getElementById("todo").appendChild(li);
+			document.getElementById("item").value="";
+
+			var span = document.createElement("botton");
+			var x = document.createTextNode("--Finish")
+			span.appendChild(x);
+			li.appendChild(span);
+			span.className = "close";
+
+			var closeBt = document.getElementsByClassName("close");
+			for(var i=0 ; i<closeBt.length ; i++){
+				closeBt[i].onclick = function(){
+					var del = this.parentElement;
+					del.remove();
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1201_02</title>
+	</head>
+	<body>
+		<input type="text" id="score">
+		<button id="bt">Send</button><br><br>
+		
+		<h1 id="ap"></h1>
+		<script>
+					
+			document.getElementById("bt").onclick = function(){
+				//console.log("YOOOO");
+				var score = document.getElementById("score").value;
+				// console.log(score);
+				
+				var out = document.getElementById("ap")
+				
+				if(isNaN(score)){
+					//console.log("please type correct score.");
+					//alert("請輸入正確數值");
+					out.innerHTML = "<h1 style='background-color:blue;color:white;text-align:center>Error</h1>";
+					//out.style.color = "white"; 	
+					//out.style.textAlign = "center";
+				}else if(score == ""){
+						out.innerHTML = "請輸入數值";
+				}else{
+					if(score >= 60 && score <= 100){
+						//console.log("及格");
+						//alert("及格");
+						out.innerHTML = "<h1 style='color:Green '>及格</h1>";
+					}else if(score < 60 && score >= 0){
+						//console.log("不及格");
+						//alert("不及格");
+						out.innerHTML = "<h1 style='color:red'>不及格</h1>";
+					}else{
+						alert("請輸入0-100的分數");
+					}
+				}
+			}
+					
+			/*var x
+			if(x>60){
+				console.log("合格");
+			}else{
+				console.log("不合格");
+			}
+			
+		</script>
+	</body>
+	
+</html>

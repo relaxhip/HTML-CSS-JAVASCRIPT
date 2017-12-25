@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="num">
+	<button id="bt">Click!</button>
+	<div id="output"></div>
+	<script>
+		let ans = Math.round(Math.random()*100);
+		console.log(ans);
+		function guess(){
+			let num = document.getElementById("num").value;
+			let output = document.getElementById("output");
+			if(!isNaN(num) && num!=""){
+				switch(true){
+					case num > 100 || num < 0:
+						output.textContent = "請輸入0～100";
+						break;
+					case num > ans:
+						output.textContent = "太大囉～再猜小一點！";
+						break;
+					case num < ans:
+						output.textContent = "太小囉～再猜大一點！";
+						break;
+					case num == ans:
+						alert("中了！喝！",location.reload());
+					
+				} 	
+			}
+		}
+
+			 var bt = document.getElementById("bt");
+			 bt.addEventListener("click",function(){
+			 	guess();
+			 });
+	</script>
+</body>
+</html>

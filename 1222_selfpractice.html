@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practice</title>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		var data = {
+			name:"Edward",
+			age:34,
+			email:"abce@ede.ddd.ccc",
+			address:"qqppqqpqpqp"
+		}
+		var ul = document.createElement("ul");
+		var append = "<li>" + data.name + "</li>";
+		append += "<li>" + data.address + "</li>";
+		append += "<li>" + data.age + "</li>";
+		append += "<li>" + data.email + "</li>";
+		ul.innerHTML = append;
+		document.getElementById("div1").appendChild(ul);
+
+	</script>
+</body>
+</html>

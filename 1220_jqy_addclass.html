@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1220jQuery</title>
+	<style>
+		.test{
+			color: red;
+			font-size: 30px;
+			font-style: italic;
+		}
+	</style>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$("h1").click(function(){
+				$("p").toggleClass("test");
+			})
+		})
+	</script>
+</head>
+<body>
+	<h1>Title</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sint, itaque architecto. Sed voluptas quo voluptate harum fugit corporis ut soluta cum, nemo molestiae ab nesciunt praesentium debitis, incidunt doloremque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sint, itaque architecto. Sed voluptas quo voluptate harum fugit corporis ut soluta cum, nemo molestiae ab nesciunt praesentium debitis, incidunt doloremque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sint, itaque architecto. Sed voluptas quo voluptate harum fugit corporis ut soluta cum, nemo molestiae ab nesciunt praesentium debitis, incidunt doloremque!</p>
+</body>
+</html>

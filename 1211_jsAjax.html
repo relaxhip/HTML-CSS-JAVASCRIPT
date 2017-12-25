@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1211_Ajax</title>
+</head>
+<body>
+	<div id="output"></div>
+	<script>
+		let xhr = new XMLHttpRequest();
+		let url = "data.txt";
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				console.log(this.responseText);
+				let t = this.responseText;
+				document.getElementById('output').textContent = t;
+			}
+		}
+		xhr.open("GET",url,true);
+		xhr.send();
+	</script>
+</body>
+</html>

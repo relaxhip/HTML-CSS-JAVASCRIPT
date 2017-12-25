@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1212_02css</title>
+	<style>
+		.container{
+			height: 300px;
+			width: 300px;
+			border: 3px solid blue;
+		}
+		.container .box{
+			width: 50px;
+			height: 50px;
+		}
+		.container .box:nth-of-type(1){
+			background-color: #E66B6B;
+		}
+		.container .box:nth-of-type(2){
+			background-color: #2AD48A;
+		}
+		.container .box:nth-of-type(3){
+			background-color: #9490D0;
+		}
+		.container1 {
+			position: relative;
+		}
+		.container1 .box{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.container1 .box:nth-of-type(2){
+			z-index: 999;
+		}
+
+
+		.container2 .box{
+			line-height: 300px;
+		}
+
+
+		.container3 {
+			position: relative;
+		}
+		.container3 .box{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+		}
+		.container3 .box:nth-of-type(2){
+			left: 45%;
+			top: 45%;
+		}
+		.container3 .box:nth-of-type(3){
+			left: 40%;
+			top: 40%;
+		}
+
+
+		.container4{
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 0;
+		}
+		.container4 .box{
+			display: inline-block;
+			font-size: 16px;
+		}
+
+
+		.container5{
+			//display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 0;
+		}
+		.container5::before{
+			content: "";
+			display: inline-block;
+			height: 100%;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.container5 .box{
+			vertical-align: middle;
+			display: inline-block;
+			font-size: 16px;
+		}
+		/*.contasiner5 .box:nth-of-type(1){
+			height: 20px;
+		}
+		.container5 .box:nth-of-type(2){
+			height: 100%;
+		}
+		.container5 .box:nth-of-type(3){
+			height: 40px;
+		}*/
+		.container6{
+			display: flex;
+			justify-content: center;
+			-ms-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-align-items: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<b>上下左右0</b>
+	<div class="container container1">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<b>line-height</b>
+	<div class="container container2">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<b>絕對定位+transform變形</b>
+	<div class="container container3">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<b>table-cell form</b>
+	<div class="container container4">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<b>inline-block</b>
+	<div class="container container5">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<b>flex置中</b>
+	<div class="container container6">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+</body>
+</html>

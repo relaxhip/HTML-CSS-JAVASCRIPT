@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>aaa</title>
+		<style>
+			.clearfix::after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+			.container{
+				/*height:40px;*/
+				/*overflow:auto;*/
+			}
+			.box{
+				width:300px;
+				border:1px solid #000;
+				float:left;
+				height:40px;
+			}
+			.qqq{
+				height:500px;
+				background-color:#ccc;
+				/*clear:both;*/
+			}
+			.www{
+				width:50px;
+				height:100px;
+				background-color:red;
+			}
+			.www::before{
+				content:"before";
+				background-color:green;
+			}
+			.www::after{
+				content:"after";
+				background-color:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container clearfix">
+			<div class="box">aaa</div>
+			<div class="box">bbb</div>
+		</div>
+		<div class="qqq"></div>
+		<div class="www">WWWW</div>
+	</body>
+</html>

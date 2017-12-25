@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="item">
+		<button id="bt">輸入</button>
+		<ul id="todo"></ul>
+		
+		<script>
+			/*document.getElementById("bt").onclick = function(){
+				var li = document.createElement("li");
+				var listValue = document.getElementById("item").value;
+				var t = document.createTextNode(listValue);
+				li.appendChild(t);
+				document.getElementById("todo").appendChild(li);
+				document.getElementById("item").value="";
+			}*/
+			function newItem(){
+				var li = document.createElement("li"); //創建一個子元素節點li
+				var listValue = document.getElementById("item").value; //取得input的值
+				var t = document.createTextNode(listValue); //將input的質轉換成文字節點
+				li.appendChild(t); //將t節點放入li節點
+				document.getElementById("todo").appendChild(li); //將li節點放入 ul id="todo"
+				document.getElementById("item").value=""; //按完輸入恢復空值 
+				
+				var span = document.createElement("span");//創建一個span節點
+				var x = document.createTextNode("--完成"); //創建一個文字節點
+				span.appendChild(x); //將x放進span
+				li.appendChild(span); //將span放進li
+				span.className="close";
+
+				var closeBT = document.getElementsByClassName("close");
+				var i;
+				for(i=0;i<closeBT.length;i++){
+					console.log(i);
+					closeBT[i].onclick = function(){
+					 	var el = this.parentElement;
+					 	el.remove();
+					 	console.log(el);
+
+					 }
+				}
+			}
+			var bt = document.getElementById("bt");
+			bt.addEventListener("click",function(){  //監聽 click之後 執行function(){newItem
+				newItem();
+			});
+		</script>
+	</body>
+</html>

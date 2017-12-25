@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1220_element</title>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		
+		// 置換圖片
+		// $(function(){
+		// 	$("img").attr("src","image/bb2.jpg")
+		// })
+
+		//以下為變更圖片大小
+		// $(function(){
+		// 	$("img").click(function(){
+		// 		$(this).attr("width",600)
+		// 	})
+		// })
+
+		//圖片尺寸切換
+		$(function(){
+			$("img").click(function(){
+				if($(this).attr("width")==100){
+					$(this).attr("width",400);
+				}else{
+					$(this).attr("width",100);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="image/bb1.jpg" alt="picture" width="100">
+	<img src="image/bb2.jpg" alt="picture" width="100">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Level-2</h2>
+		<ul>
+			<li>Level-3</li>
+			<li>Level-3</li>
+			<li>Level-3</li>
+		</ul>
+		<p>
+			level-2 
+		</p>
+	</div>
+	<script>
+		// children() 所有子元素
+		// find() 所有後代元素，需指定
+		// eq() 所有同輩元素
+		// siblings() 所有同輩元素，需指定陣列索引
+		// parent() 直系父輩元素
+		// parents() 直系父輩元素，包含祖先
+		// closest() 直系父輩元素，包含祖先，需指定
+		console.log($("li").closest("h2"));
+	</script>
+</body>
+</html>

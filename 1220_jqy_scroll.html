@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1220_scroll</title>
+	<script src="jquery-1.12.4.min.js"></script>
+	<style>
+		#about{
+			background-color: #e02;
+			height: 800px;
+		}		
+		#service{
+			background-color: #fd9;
+			height: 800px;
+		}		
+		#works{
+			background-color: #2f9;
+			height: 800px;
+		}		
+		#contact{
+			background-color: #a94;
+			height: 800px;
+		}
+		nav{
+			background-color: #555;
+			overflow: auto;
+		}
+		nav ul{
+			margin: 0;
+			padding: 0;
+		}
+		nav li{
+			float: left;
+			list-style: none;
+		}
+		nav li a{
+			display: block;
+			padding: 10px 20px;
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
+	<script>
+		$(function(){
+			let a = $("#about").offset().top;
+			let s = $("#service").offset().top;
+			let w = $("#works").offset().top;
+			let c = $("#contact").offset().top;
+
+			$("li").eq(0).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:a
+				})
+			})
+			$("li").eq(1).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:s
+				})
+			})
+			$("li").eq(2).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:w
+				})
+			})
+			$("li").eq(3).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:c
+				})
+			})
+
+			// $('li:nth-of-type(1) a').click(function(){
+
+			// })
+			// $('li:nth-of-type(2) a').click(function(){
+
+			// })
+			// $('li:nth-of-type(3) a').click(function(){
+
+			// })
+			// $('li:nth-of-type(4) a').click(function(){
+
+			// })
+		})
+	</script>
+</head>
+<body>
+	<nav class="clearfix">
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Service</a></li>	
+			<li><a href="#">Works</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="container" id="about"></div>
+	<div class="container" id="service"></div>
+	<div class="container" id="works"></div>
+	<div class="container" id="contact"></div>
+</body>
+</html>

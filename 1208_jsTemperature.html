@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="temp">
+	<select id="units">
+			<option value="metric">攝氏</option>
+			<option value="imperial">華氏</option>
+	</select>
+	<button id="bt">轉換</button>
+	<div id="output"></div>
+	<script>
+		function temp_change(){
+			let temp = document.getElementById("temp").value;
+			let units = document.getElementById("units").value;
+			let newTemp;
+			if(units == "metric"){
+				newTemp = Math.round(((temp*9 / 5) + 32)*10)/10;
+				output.textContent = `轉換後為：華氏${newTemp}度`;
+			}else{
+				newTemp = Math.round((temp-32)*5/9*10)/10;
+				output.textContent = `轉換後為：攝氏${newTemp}度`;
+			}
+		}
+			let bt = document.getElementById("bt");
+			bt.addEventListener("click",function(){
+				temp_change();
+			});
+	</script>
+
+	<!-- 攝氏:<input type="text" id="C">
+	<button id="bt1" onclick="cf()">轉換</button>
+	<div id="output1"></div>
+	<br>
+	華氏:<input type="text" id="F">
+	<button id="bt2" onclick="fc()">轉換</button>
+	<div id="output2"></div> -->
+	<!-- <script type="text/javascript">
+		// function cf(){
+		// 	let C = document.getElementById("C").value;
+		// 	let ctf = Math.round((C*9/5)+32);
+		// 	let o1 = document.getElementById("output1");
+		// 	o1.textContent = `轉換後為：華氏${ctf}度`;	
+		// }
+		// function fc(){
+		// 	let F = document.getElementById("F").value;
+		// 	let ftc = Math.round((F-32)*5/9);
+		// 	let o2 = document.getElementById("output2");
+		// 	o2.textContent = `轉換後為：攝氏${ftc}度`;
+		// }
+		// let bt1 = document.getElementById("bt1");
+		// bt1.addEventListener("click",function(){
+		// 	temp();
+		// });
+
+		// let bt2 = document.getElementById("bt2");
+		// bt2.addEventListener("click",function(){
+		// 	temp();
+		// });
+	</script> -->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1220_jqy_gallery</title>
+	<style>
+		#gallery img{
+			width: 500px;
+		}
+		#thumbs{
+			font-size: 0;
+		}
+		#thumbs img{
+			width: 100px;
+		}
+	</style>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$("#thumbs img").click(function(){
+				let newImg = $(this).attr("src");
+				$("#gallery img").attr("src",newImg);
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div id="gallery">
+		<img src="image/pic_01.jpg" alt="">
+	</div>
+	<div id="thumbs">
+		<img src="image/pic_01.jpg" alt="">
+		<img src="image/pic_02.jpg" alt="">
+		<img src="image/pic_03.jpg" alt="">
+		<img src="image/pic_04.jpg" alt="">
+		<img src="image/pic_05.jpg" alt="">
+	</div>
+</body>
+</html>

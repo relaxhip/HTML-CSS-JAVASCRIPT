@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="test"></p>
+		<div id="div1"></div>
+		<script>
+			var data = {
+				name:"ako",
+				age:27,
+				email:"relaxhip@gmail.com"
+			}
+			var c = "<h1>姓名:" + data.name + "</h1>"
+			c += "<p>年齡:" + data.age + "</p>"
+			c += "<p>E-mail:" + data.email + "</p>"
+			console.log(c);
+			
+			var output = document.getElementById("test");
+			output.innerHTML = c;
+			
+			document.getElementById("test").innerHTML = c ;
+			
+			var ul = document.createElement("ul");
+			var c = "<li>" + data.name + "</li>";
+			c += "<li>" + data.age + "</li>"
+			c += "<li>" + data.email + "</li>"
+			
+			ul.innerHTML = c;
+			document.getElementById("div1").appendChild(ul)
+			
+			
+			
+		</script>
+	</body>
+</html>

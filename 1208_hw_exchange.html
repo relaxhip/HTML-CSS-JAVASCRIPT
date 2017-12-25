@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exchange</title>
+</head>
+<body>
+	<input type="text" id="ntd" placeholder="新台幣">
+	<select id="units">
+		<option value="USD">USD美金</option>
+		<option value="CNY">CNY人民幣</option>
+		<option value="JPY">JPY日圓</option>
+		<option value="EUR">EUR歐元</option>
+	</select>
+	<button id="bt">Change</button>
+	<div id="output"></div>
+	<script>
+		function change(){
+			let ntd = document.getElementById("ntd").value;
+			let	units = document.getElementById("units").value;
+			let cha;
+			if(!isNaN(ntd) && ntd!=""){
+				switch(true){
+					case units == "USD":
+						output.textContent = `您可以兌換${ntd*0.033}美元`;
+						break;
+					case units == "CNY":
+						output.textContent = `您可以兌換${ntd*0.220}人民幣`;
+						break;
+					case units == "JPY":
+						output.textContent = `您可以兌換${ntd*3.787}日圓`;
+						break;
+					case units == "EUR":
+						output.textContent = `您可以兌換${ntd*0.028}歐元`;
+				}
+			}
+		}
+		var bt = document.getElementById("bt");
+		bt.addEventListener("click",function(){
+			change();
+		});
+	</script>
+</body>
+</html>
+
+script

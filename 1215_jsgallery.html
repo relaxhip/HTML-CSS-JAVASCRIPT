@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1215_gallery</title>
+	<style>
+		#gallery{
+			width: 600px;
+		}
+		#thumbs img{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="gallery">
+		<img src="image/pic_01.jpg">
+	</div>
+	<div id="thumbs">
+		<img src="image/pic_01.jpg">
+		<img src="image/pic_02.jpg">
+		<img src="image/pic_03.jpg">
+		<img src="image/pic_04.jpg">
+		<img src="image/pic_05.jpg">
+		<img src="image/pic_06.jpg">
+	</div>
+	<script>
+		var gallery = document.getElementById("gallery").children[0];
+		// console.log(gallery);
+		var thumbs = document.getElementById("thumbs").children;
+		// console.log(thumbs);
+		for(let i=0 ; i<thumbs.length;i++){
+			// console.log(i);
+			thumbs[i].onclick = function(){  //onmouseover=滑鼠滑過 onclick=滑鼠點擊
+				// console.log(gallery.getAttribute("src"));
+				let newImg = this.getAttribute("src");
+				gallery.setAttribute("src",newImg);
+				// gallery.setAttribute("src",this.getAttribute("src"));
+			}
+		}
+	</script>
+</body>
+</html>

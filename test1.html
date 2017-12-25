@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			width: 800px;
+		}
+		#gallery{
+			width: 600px;
+		}
+		#thumbs{
+			display: inline-block;
+			/*font-size: 0;*/
+		}
+		#thumbs img{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="gallery">
+		<img src="image/pic_01.jpg" alt="">
+	</div>
+	<div id="thumbs">
+		<img src="image/pic_01.jpg" alt="">
+		<img src="image/pic_02.jpg" alt="">
+		<img src="image/pic_03.jpg" alt="">
+		<img src="image/pic_04.jpg" alt="">
+		<img src="image/pic_05.jpg" alt="">
+		<img src="image/pic_06.jpg" alt="">
+	</div>
+	<script>
+		let gallery = document.getElementById("gallery").children[0];
+		let thumbs = document.getElementById("thumbs").children;
+		for(let i=0 ; i<thumbs.length ; i++){
+			thumbs[i].onmouseover = function(){
+				gallery.setAttribute("src",this.getAttribute("src"));
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>1206_01 position</title>
+		<style>
+			body{
+				height: 3000px;
+			}
+			*{
+				font-family: helvatica,"微軟正黑體";
+			}
+			h4{
+				font-weight: normal;
+			}
+			.box{
+				width: 300px;
+				height: 120px;
+				border: 3px solid #000;
+			}
+			.rect{
+				width: 50px;
+				height: 50px;
+				float: left;
+			}
+			.rect1{
+				background-color: deeppink;
+			}
+			.rect2{
+				background-color: gold;
+			}
+			.rect3{
+				background-color: gray;
+			}
+			.absolute .rect2{
+				position: absolute;
+				//top: 500px;
+				left: 200px;
+			}
+			.fixed .rect2{
+				position: fixed;
+				top: 300px;
+				left: 30px;
+			}
+			.relative .rect2{
+				position: relative;
+				top: 10px;
+				left: 10px;
+			}
+			.reab{
+				position: relative;
+			}
+			.reab .rect2{
+				position: absolute;
+				right: 50px;
+				bottom: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h4>Static靜態定位</h4>
+			<div class="rects">
+				<div class="rect rect1"></div>
+				<div class="rect rect2"></div>
+				<div class="rect rect3"></div>
+			</div>
+		</div>
+		<div class="box absolute">
+			<h4>Absolute絕對定位</h4>
+			<div class="rects">
+				<div class="rect rect1"></div>
+				<div class="rect rect2"></div>
+				<div class="rect rect3"></div>
+			</div>
+		</div>
+		<div class="box fixed">
+			<h4>Static固定定位</h4>
+			<div class="rects">
+				<div class="rect rect1"></div>
+				<div class="rect rect2"></div>
+				<div class="rect rect3"></div>
+			</div>
+		</div>
+		<div class="box relative">
+			<h4>Relaxtive相對定位</h4>
+			<div class="rects">
+				<div class="rect rect1"></div>
+				<div class="rect rect2"></div>
+				<div class="rect rect3"></div>
+			</div>
+		</div>
+		<div class="box reab">
+			<h4>絕對定位+相對定位</h4>
+			<div class="rects">
+				<div class="rect rect1"></div>
+				<div class="rect rect2"></div>
+				<div class="rect rect3"></div>
+			</div>
+		</div>
+	</body>
+</html>

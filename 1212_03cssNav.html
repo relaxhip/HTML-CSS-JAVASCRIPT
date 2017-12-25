@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1212_03 Nav</title>
+	<style>
+		*{
+			font-family: serif;"微軟正黑體";
+		}
+		body,h1,h2{
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		nav{
+			width: 100%;
+			background-color: #262626;
+		}
+		.fixed-width{
+			width: 960px;
+			margin: auto;
+			//height: 70px;
+		}
+		nav .logo{
+			font-size: 50px;
+			color: #fff;
+			height: 70px;
+			float: left;
+			line-height: 70px;
+			transition:.5s;
+		}
+		 nav .logo:hover{
+		 	color: #CB5A92;
+		 	transform: skew(360deg,360deg);
+		 }
+		nav ul{
+			float: right;
+			margin: 0;
+			padding: 0;
+		}
+		nav li{
+			list-style-type: none;
+			float: left;
+		}
+		nav a{
+			display: block;
+			height: 70px;
+			line-height: 70px;
+			color: #fff;
+			text-decoration: none;
+			margin-left: 20px;
+			transition: transform 1s,color .5s 1.5s;
+		}
+		nav a:hover{
+			color: #1EA8DF;
+			/*transform: rotate3d(30,30,30,360deg);*/
+			transform: translate(-10px,0);
+			/*transition-timing-function: cubic-bezier(0.6, -0.28, 0.74, 0.05);*/
+
+		}
+	</style>
+</head>
+<body>
+	<nav class="clearfix">
+		<div class="fixed-width">
+			<div class="logo">Logo</div>
+			<ul>
+				<li><a href="">MENU1</a></li>
+				<li><a href="">MENU2</a></li>
+				<li><a href="">MENU3</a></li>
+				<li><a href="">MENU4</a></li>
+				<li><a href="">MENU5</a></li>
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>

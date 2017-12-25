@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1211_AjaxWeather</title>
+</head>
+<body>
+	<div id="output"></div>
+	<script>
+		let xhr = new XMLHttpRequest();
+		let url = "weather.xml";
+		xhr.onreadystatechange = function(){
+			if(this.readyState==4 && this.status==200){
+				console.log(this.responseXML);
+				let t = this.responseXML;
+				let c = t.getElementsByTagName("location");
+				console.log(c);
+				let i;
+				for(i=0;i<c.length;i++){
+					//console.log(c[i].children[0].childNodes[0]);
+					console.log(c[i].children[1].children[1].children[2].children[0].childNodes[0]);
+				}
+			}
+		}
+		xhr.open("GET",url,true);
+		xhr.send();
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>1128上課用</title>
+	</head>
+	<body>
+	<img src="../YOH.jpg"><br>
+	<img src="../bb1.jpg" width="600" height="360" title="baseball">
+	<img src="../bb2.jpg" width="800" title="hitter" alt="this is hitter" >
+	
+	<table border="1" width="400" height="300" bgcolor="pink" align="center">
+		<tr>
+			<th>Hitter</th>
+			<th>Hit</th>
+			<th>Play</th>
+		</tr align="center">
+		<tr>
+			<td>YOH</td>
+			<td>4</td>
+			<td rowspan="2" align="center">5</td>
+		</tr>
+		<tr>
+			<td valign="top" align="center">Ootani</td>
+			<td valign="top">3</td>
+			<!--<td>4</td>--> 
+		</tr>
+		<tr>
+			<td colspan="3" align="center">Total:9</td>
+	</table>
+	
+	<form>
+		Name:<input type="text" required placeholder="Please enter your name"><br><br>
+		Mail:<input type="email"><br>
+		Password:<input type="password" required><br><br>
+		sexual:<input type="radio" name="sex" value="boy" checked>Boy
+		<input type="radio" name="sex" value="girl">Girl<br><br>
+		
+		位置：<br>
+		<input type="checkbox" name="position" value="infield">內野手<br>
+		<input type="checkbox" name="position" value="outfield">外野手<br>
+		<input type="checkbox" name="position" value="pitcher">投手<br>
+		<input type="checkbox" name="position" value="catcher">捕手<br>
+		<br>
+		<select>
+			<option value="1年生">1年生</option>
+			<option value="2-3年生" selected>2-3年生</option>	
+			<option value="4-5年生">4-5年生</option>
+			<option value="6年生以上">6年生以上</option>
+		</select>
+		<br>
+		
+		
+		<!--<input type="button" onclick="alert('Hello baseball world!')" value="Please click me"> <br>
+		<button type="button" onclick="alert('Hi player')" value="hihi">Push</button> <br>-->
+		意見欄：<br>
+		<input type="date"><br>
+		<textarea rows="5px" cols="40px" maxlength="10"></textarea><br>
+		<input type="submit" value="Send it">
+		<input type="reset" value="Clean">
+	</form>
+	<audio controls="controls" loop="loop">
+		<source src="audio/Breeze.mp3" type="audio/mp3">
+	</audio>
+	<video controls="controls" width="1200">
+		<source src="video/dizi.mp4" type="video/mp4">
+	</video>
+	</body>
+</html>

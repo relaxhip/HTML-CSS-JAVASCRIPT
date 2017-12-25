@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	身高：<input type="text" id="height">
+	體重：<input type="text" id="weight">
+	<button id="bt">計算</button>
+	<div id="output"></div>
+	<script>
+		function BMI(){
+		let h = document.getElementById("height").value;
+		let w = document.getElementById("weight").value;
+		let bmi = w / Math.pow((h/100),2); //POW>>(底數,指數)
+		let o = document.getElementById("output");
+		let B = Math.round(bmi*10)/10;
+		o.textContent = `您的BMI值為${B}`;//字串樣板 ${變數}
+	}
+
+		let bt = document.getElementById("bt")
+		bt.addEventListener("click",function(){
+			BMI();
+		});
+	</script>
+</body>
+</html>

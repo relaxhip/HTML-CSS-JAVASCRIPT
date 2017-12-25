@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>our store</title>
+		<style>
+			*{
+				font-family: /*arial,serif,微軟正黑體,*/serif;
+			}
+			
+			.clearfix::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			.container{
+				width: 960px;
+				//height: 500px; 清除浮動第一種
+				//overflow: auto; 清除浮動第三種
+			}
+			.left{
+				width: 480px;
+				float: left;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.right{
+				width: 480px;
+				height: 400px;
+				background-color: pink;
+				float: right;
+				padding: 20px;
+				box-sizing: border-box;
+				background-image:url(image/store_1.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			.right img{
+				width: 100%;
+			}
+			.container p{
+				text-align: center;
+				color: #888;
+				line-height: 1.5em;
+			}
+			.container h2{
+				font-size: 48px;
+				text-align: center;
+			}
+			.container a {
+				display: block;
+				width: 80px;
+				padding: 5px;
+				text-align: center;
+				text-decoration: none;
+				color: #000;
+				border-bottom:3px solid #000;
+				margin: 10px auto;
+			}
+			.aaa{
+				height: 300px;
+				background: #ccc;
+				//clear:both; 第二種清除浮動
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container clearfix">  <!--clearfix為清除浮動-->
+			<div class="left">
+				<h2>OUR STORE</h2>
+				<p>* * *<br>
+Voluptatibus quaerat laboriosam fugit non Ut consequatur animi est molestiae enim a voluptate totam natus modi debitis dicta impedit voluptatum quod sapiente illo saepe explicabo quisquam perferendis labore et illum suscipit</p>
+				<a href="">ABOUT US</a>
+			</div>
+			<div class="right">
+			<!--<img src="image/store_1.jpg">-->
+			</div>
+		</div>
+		<div class="aaa"></div>
+	</body>
+</html>
