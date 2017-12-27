@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.gallery img{
+			width: 600px;
+		}
+
+		.thumbs img{
+			width: 100px;
+			cursor: pointer;
+		}
+	</style>
+	<script src="../jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$(".thumbs").find("img").click(function(){
+				let cha = $(this).attr("src");
+				$(".gallery").find("img").attr("src",cha);
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	<div class="gallery">
+		<img src="../image/pic_01.jpg" alt="">
+	</div>
+	<div class="thumbs">
+	<img src="../image/pic_01.jpg">
+	<img src="../image/pic_02.jpg">
+	<img src="../image/pic_03.jpg">
+	<img src="../image/pic_04.jpg">
+	<img src="../image/pic_05.jpg">
+	</div>
+</body>
+</html>

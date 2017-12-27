@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.clearfix::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#story{
+			background-color: #EC1212;
+			height: 800px;
+		}		
+		#content{
+			background-color: #5C87D4;
+			height: 800px;
+		}		
+		#work{
+			background-color: #68E383;
+			height: 800px;
+		}		
+		#about{
+			background-color: #ECA27E;
+			height: 800px;
+		}		
+		#contactus{
+			background-color: #4EA2D1;
+			height: 800px;
+		}		
+		#help{
+			background-color: #B975DD;
+			height: 800px;
+		}
+		nav{
+			background-color: #464242;
+		}
+		nav ul{
+			margin: 0px;
+			padding: 0px;
+		}
+		nav li{
+			float: left;
+			list-style: none;
+		}
+		nav li a{
+			display: block;
+			padding: 10px 20px;
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+	<script src="../jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			let s = $("#story").offset().top;
+			let c = $("#content").offset().top;
+			let w = $("#work").offset().top;
+			let a = $("#about").offset().top;
+			let cu = $("#contactus").offset().top;
+			let h = $("#help").offset().top;
+
+			$("li").eq(0).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:s
+				});
+			});			
+			$("li").eq(1).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:c
+				});
+			});			
+			$("li").eq(2).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:w
+				});
+			});			
+			$("li").eq(3).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:a
+				});
+			});			
+			$("li").eq(4).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:cu
+				});
+			});			
+			$("li").eq(5).find("a").click(function(){
+				$("html,body").animate({
+					scrollTop:h
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="clearfix">
+		<ul>
+			<li><a href="#">Story</a></li>
+			<li><a href="#">Content</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Cantact Us</a></li>
+			<li><a href="#">Help</a></li>
+		</ul>
+	</nav>
+	<div class="container" id="story"></div>
+	<div class="container" id="content"></div>
+	<div class="container" id="work"></div>
+	<div class="container" id="about"></div>
+	<div class="container" id="contactus"></div>
+	<div class="container" id="help"></div>
+</body>
+</html>
