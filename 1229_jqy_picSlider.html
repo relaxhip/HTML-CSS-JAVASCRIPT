@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.slider {
+			width: 600px;
+			height: 600px;
+		}
+		.slider .photo {
+			width: 600px;
+			height: 600px;
+			float: left;
+		}
+		.slider .photo img{
+			width: 100%;
+		}
+	</style>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			let currentPosition = 0;
+			let photoWidth = 600;
+			let photo = $(".photo")
+			let photoNums = photo.length;
+			$(".wrapper").css({
+				width: photoWidth*photoNums
+			});
+			function move(){
+				$(".wrapper").animate({
+					marginLeft: -(currentPosition*photoWidth)
+				});
+			}
+			function cycle(){
+				if(currentPosition == photoNums-1){
+					currentPosition = 0;
+				}else{
+					currentPosition ++;
+				}
+				move();
+			}
+			setInterval(cycle,1500)
+		});
+	</script>
+</head>
+<body>
+	<div class="slider">
+		<div class="wrapper">
+			<div class="photo">
+				<img src="image/slider_01.jpg" alt="">
+			</div>
+			<div class="photo">
+				<img src="image/slider_02.jpg" alt="">
+			</div>
+			<div class="photo">
+				<img src="image/slider_03.jpg" alt="">
+			</div>
+			<div class="photo">
+				<img src="image/slider_04.jpg" alt="">
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
