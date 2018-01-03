@@ -7,12 +7,13 @@
 		.slider {
 			width: 600px;
 			height: 600px;
-			overflow: hidden;
+			position: relative;
 		}
 		.slider .photo {
 			width: 600px;
 			height: 600px;
-			/*float: left;*/
+			position: absolute;
+			display: none;
 		}
 		.slider .photo img{
 			width: 100%;
@@ -21,33 +22,22 @@
 	<script src="jquery-1.12.4.min.js"></script>
 	<script>
 		$(function(){
-			let currentPosition = 0;
-			let photo = $(".photo")
-			// let photoWidth = photo.width();
-			let photoHeight = photo.height();
+			let photo = $(".photo");
 			let photoNums = photo.length;
-			let speed = 6000;
-			let duration = 2500;
-			$(".wrapper").css({
-				// width: photoWidth*photoNums
-				height: photoHeight*photoNums
-			});
+			let currentPosition = 0;
+			let speed = 4000;
+			let duration = 1200;
+			photo.eq(0).show();
+
 			function move(){
-				$(".wrapper").animate({
-					// marginLeft: -(currentPosition*photoWidth)
-					marginTop: -(currentPosition*photoHeight)
-				},duration);
+				let nextPhoto = (currentPosition+1)%photoNums;
+				photo.eq(currentPosition).fadeOut(duration);
+				photo.eq(nextPhoto).fadeIn(duration);
+				currentPosition = nextPhoto;
 			}
-			function cycle(){
-				if(currentPosition == photoNums-1){
-					currentPosition = 0;
-				}else{
-					currentPosition ++;
-				}
-				move();
-			}
-			setInterval(cycle,speed)
-		});
+			setInterval(move,speed)
+		})
+			
 	</script>
 </head>
 <body>
