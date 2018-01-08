@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax+json</title>
+	<style>
+		.box {
+			width: 300px;
+			height: 80px;
+			padding: 15px;
+			text-align: center;
+			margin: auto;
+			background-color: violet;
+			margin-bottom: 10px;
+
+		}
+	</style>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$("#city").change(function(){
+				$(".container").empty();
+				let city = $("#city").val();
+				$.ajax({
+					url:"http://api.openweathermap.org/data/2.5/forecast/daily",
+					data:{
+						q: city,
+						appid: "b1ecbccd638b763d489602917ba47cc3",
+						units: "metric",
+						lang: "zh_tw"
+					},
+					success: function(e){
+						$(e.list).each(function(){
+							let myDate = new Date(this.dt*1000)
+							let year = myDate.getFullYear();
+							let month = myDate.getMonth()+1;
+							let date = myDate.getDate();
+							let day = myDate.getDay()
+							let D = ["日曜日","月曜日",'火曜日','水曜日','木曜日','金曜日','土曜日']
+							console.log(myDate);
+							let temp = parseInt(this.temp.day);
+							let des = this.weather[0].description;
+							let icon = this.weather[0].icon;
+							let c = 
+							`<div class="box">
+							${year}年${month}月${date}日${D[day]}
+							<div>氣溫:${temp}&deg;C</div><div>天氣狀況：${des}</div><div><img src="http://openweathermap.org/img/w/${icon}.png"></div>
+							</div>`;
+							$(".container").append(c);
+						})
+					},
+					error: function(){
+						console.log(error);
+					},
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<select id="city">
+		<option value="">請選擇城市</option>
+		<option value="taipei">台北</option>
+		<option value="tokyo">東京</option>
+		<option value="new york">紐約</option>
+		<option value="london">倫敦</option>
+	</select>
+	<div class="container"></div>
+</body>
+</html>

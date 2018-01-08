@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax+json</title>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url:"http://api.openweathermap.org/data/2.5/weather",
+				data:{
+					q: "taipei",
+					appid: "e199f154b7c7015ba048784cec8a0dc0",
+					units: "metric",
+					lang: "zh_tw"
+				},
+				success: function(e){
+					console.log(e.name);
+					console.log(e.main.temp);
+					console.log(e.weather[0].description);
+
+					let name = e.name;
+					let temp = e.main.temp;
+					let description = e.weather[0].description;
+
+					let c = 
+					`<div>城市：${name}</div>
+					<div>目前氣溫：攝氏${temp}度</div>
+					<div>天氣狀況:${description}</div>`;
+
+					$(".container").append(c);
+				},
+				error: function(){
+					console.log(error);
+				},
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container"></div>
+</body>
+</html>

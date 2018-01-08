@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax+json</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background-color: burlywood;
+		}
+		.weather-box {
+			margin: auto;
+			position: relative;
+			width: 510px;
+			display: flex;
+			flex-wrap: wrap;
+			top: 10px;
+		}
+		.item:nth-of-type(1) {
+			width: 510px;
+			height: 300px;
+			border: 0;
+			color: gray;
+			background-color: lightsteelblue;
+		}
+		.item:nth-of-type(1) .temp{
+			font-size: 70px;
+			font-weight: bold;
+		}
+		.item:nth-of-type(1) .icon{
+			font-size: 5em;
+		}
+		.item {
+			width: calc(510px / 3);
+			height: 150px;
+			background-color: lightslategray;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			font-size: 16px;
+			color: lightsteelblue;
+			border: 1px solid lightgray;
+			flex-direction: column;
+		}
+		.temp {
+			font-size: 30px;
+		}
+		.icon {
+			font-size: 1.5em;
+		}
+
+	</style>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$("#city").change(function(){
+				$(".weather-box").empty();
+				let city = $("#city").val();
+				$.ajax({
+					url:"http://api.openweathermap.org/data/2.5/forecast/daily",
+					data:{
+						q: city,
+						appid: "b1ecbccd638b763d489602917ba47cc3",
+						units: "metric",
+						lang: "zh_tw"
+					},
+					success: function(e){
+						$(e.list).each(function(){
+							let myDate = new Date(this.dt*1000)
+							let year = myDate.getFullYear();
+							let month = myDate.getMonth()+1;
+							let date = myDate.getDate();
+							let day = myDate.getDay()
+							let D = ["Sun","Mon","Tue","Wed","thu","Fri","Sat"]
+							console.log(myDate);
+							let temp = parseInt(this.temp.day);
+							let des = this.weather[0].description;
+							let icon = this.weather[0].icon;
+							switch(icon){
+								case "10d":
+									icon = "wi wi-hail";
+									break;
+								case "01d":
+									icon = "wi wi-day-sunny"
+									break;
+								case "02d":
+									icon = "wi wi-day-cloudy"
+									break;
+								case "13d":
+									icon = "wi wi-day-snow"
+									break;
+								case "04d":
+									icon = "wi wi-cloudy"
+									break;
+							}
+							let c = `
+							<div class="item">
+								<div class="icon">
+								<span class="${icon}"></span>
+								</div>
+								<div class="temp">${temp}&deg;C</div>
+								<div class="des">${des}</div>
+								<div class="day">${D[day]}</div>
+							</div>
+							`;
+							$(".weather-box").append(c);
+						})
+					},
+					error: function(){
+						console.log(error);
+					},
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="weather-box"></div>
+	<select id="city">
+		<option value="">請選擇城市</option>
+		<option value="taipei">台北</option>
+		<option value="tokyo">東京</option>
+		<option value="new york">紐約</option>
+		<option value="london">倫敦</option>
+	</select>
+</body>
+</html>
