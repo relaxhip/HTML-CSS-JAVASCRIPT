@@ -1,0 +1,32 @@
+@media screen and (max-width: 650px) {
+  .main .img {
+    background-position: center center;
+  }
+  .main .hakata {
+    font-size: 18px;
+    left: 35px;
+    mwriting-mode: vertical-rl;
+  }
+  .main .menu .img {
+    -webkit-box-ordinal-group: 13;
+    -ms-flex-order: 12;
+    order: 12;
+  }
+  .main .menu .col-sm-6.col-12 {
+    padding: 10px 0;
+  }
+  .main .store .container {
+    width: 100%;
+  }
+  .main-menu {
+    margin: 0 !important;
+  }
+  .img img {
+    width: 90% !important;
+    top: 0 !important;
+    left: 5% !important;
+  }
+  .title img {
+    width: 15% !important;
+  }
+}

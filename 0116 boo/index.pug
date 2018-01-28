@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Iroha
+	<link rel="stylesheet" href="css/style.css">
+	link(rel="stylesheet", href="css/mobile.css")
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<script src="slick/slick.min.js"></script>
+	<script src="js/main.js"></script>
+body
+	include nav.pug
+	.main
+		.fadeslider.container-fluid
+			.img
+			.img
+			.img
+		.hakata
+			img(src="image/hakata.png")
+	.main-menu.row
+		.col-md-6.col-12.img
+			img(src="image/menu-loop.gif")
+		.col-md-6.col-12.title
+			img(src="image/menu-title.png")
+			.menu-intro
+				p お品書き心のこもった
+				p こだわりづくしのお料理の数々。
+				p 他では、味わえない、
+				p いろは印の上質なおもてなしを
+				p 是非ご賞味くださいませ。
+	.slider.container-fluid
+		.menuSlider
+			.col-3
+			.col-3
+			.col-3
+			.col-3
+			.col-3
+			.col-3
+			.col-3
+			.col-3
+		.button.text-center
+			.btn.btn-danger.btn-lg お料理をみる
+	.store.container-fluid
+		.row
+			.col-12.col-md-6.shop1.shop
+				.container
+					h2
+						a(href="#")
+							img(src="image/shop1-name.png", alt="")
+						span Umeda
+					p モダンな「和」空間で過ごす優雅なひと時。厳選素材と伝統の調理法で味わう極上のお料理を落ち着いた雰囲気の中のお楽しみください。
+					ul
+						li
+							a(class="btn btn-dark" href="") フォトギャラリー
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗情報
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") アクセスマップ
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗ブログ
+								span.fa.fa-angle-right
+			.col-12.col-md-6.shop2.shop
+				.container
+					h2
+						a(href="#")
+							img(src="image/shop2-name.png", alt="")
+						span Kitashinchi
+					p カウンター席から個室、地下の宴会個室など様々なシーンで御利用頂ける北新地店で、厳選食材、秘伝の技法で丹念に作られた「博多味処いろは」伝統の味をご堪能下さい。
+					ul
+						li
+							a(class="btn btn-dark" href="") フォトギャラリー
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗情報
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") アクセスマップ
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗ブログ
+								span.fa.fa-angle-right
+			.col-12.col-md-6.shop3.shop
+				.container
+					h2
+						a(href="#")
+							img(src="image/shop3-name.png", alt="")
+						span Hakata
+					p 創業昭和28年 福岡博多伝統の味。十分に吟味した素材を使い、代々受けついだ調理法で、変わらない伝統の味と特別な時間をご提供させていただきます。
+					ul
+						li
+							a(class="btn btn-dark" href="") フォトギャラリー
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗情報
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") アクセスマップ
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗ブログ
+								span.fa.fa-angle-right
+			.col-12.col-md-6.shop4.shop
+				.container
+					h2
+						a(href="#")
+							img(src="image/shop4-name.png", alt="")
+						span Souemoncho
+					p 福岡 博多の味を遠く大阪の地へ。博多の人々が愛した伝統の味とおもてなしの心を大切な時間をごゆっくりお過ごしいただけます。
+					ul
+						li
+							a(class="btn btn-dark" href="") フォトギャラリー
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗情報
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") アクセスマップ
+								span.fa.fa-angle-right
+						li
+							a(class="btn btn-dark" href="") 店舗ブログ
+								span.fa.fa-angle-right
+	include footer.pug

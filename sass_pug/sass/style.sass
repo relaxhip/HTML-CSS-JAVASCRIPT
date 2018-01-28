@@ -1,0 +1,22 @@
+html,body
+	background-color: #dba73f
+$bgcolor: #e4c
+@mixin size($w,$h)
+	width: $w
+	height: $h
+@mixin btn($w:50px,$h:30px,$p-h:10px,$p-v:20px,$bgc:#aaa)
+	width: $w
+	height: $h
+	padding: $p-h $p-v
+	background-color: $bgc
+.box
+	width: 380px
+
+.top
+	height: 330px
+	.tag
+		+size(25px,50px)
+	.name
+		margin: 0
+.bt
+	+btn(20px,10px,$bgc:$bgcolor)

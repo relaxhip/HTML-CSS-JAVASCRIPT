@@ -1,0 +1,266 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  font-family: 'Noto Sans TC';
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  background-color: #555;
+  padding: 30px 0;
+}
+
+footer .logo img {
+  width: 70px;
+  -webkit-filter: invert(100%) opacity(95%);
+  filter: invert(100%) opacity(95%);
+}
+
+footer .menu {
+  padding: 30px 0;
+  font-size: 20px;
+}
+
+footer .menu a {
+  color: #fff;
+}
+
+footer .menu a:hover {
+  color: #fff;
+}
+
+footer .main-banner {
+  margin-bottom: 20px;
+}
+
+footer .main-banner img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+footer .banner {
+  margin-bottom: 20px;
+}
+
+footer .banner img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+footer .copyright p {
+  color: #fff;
+}
+
+.main {
+  margin-bottom: 20px;
+}
+
+.main .fadeslider .img {
+  width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main .fadeslider .img:nth-of-type(1) {
+  background-image: url("../image/main1.png");
+}
+
+.main .fadeslider .img:nth-of-type(2) {
+  background-image: url("../image/main2.png");
+}
+
+.main .fadeslider .img:nth-of-type(3) {
+  background-image: url("../image/main3.png");
+}
+
+.main .hakata {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+}
+
+.main-menu {
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../image/menu-bg.png");
+}
+
+.main-menu .img img {
+  position: absolute;
+  width: 80%;
+  left: 20%;
+  top: 30%;
+}
+
+.main-menu .title {
+  position: relative;
+  left: 0;
+}
+
+.main-menu .title img {
+  position: absolute;
+  right: 12%;
+  top: 8%;
+  width: 23%;
+}
+
+.main-menu .title .menu-intro {
+  position: absolute;
+  -webkit-writing-mode: tb-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: tb-rl;
+  top: 20%;
+  right: 43%;
+}
+
+.main-menu .title .menu-intro p {
+  margin: 0 10px;
+  letter-spacing: 3px;
+}
+
+.slider .col-3 {
+  height: 300px;
+  background-color: #444;
+  border: 1px solid #000;
+}
+
+.slider .button {
+  padding: 50px 0;
+}
+
+.slider .button .btn.btn-danger.btn-lg {
+  border-radius: 5px;
+  font-weight: 300;
+  background-color: #E7475E;
+  padding: 10px 50px;
+}
+
+.slider.container-fluid {
+  padding: 0;
+}
+
+.store .container {
+  width: 75%;
+}
+
+.store .shop {
+  height: 520px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 70px 0;
+  color: white;
+  position: relative;
+}
+
+.store .shop h2 span {
+  font-size: 14px;
+  position: absolute;
+  top: 35%;
+  left: 17%;
+}
+
+.store .shop p {
+  width: 450px;
+  margin: 40px auto;
+}
+
+.store .shop ul {
+  list-style-type: none;
+  width: 480px;
+}
+
+.store .shop ul li {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.store .shop ul li a {
+  border-radius: 0;
+  width: 200px;
+  background-color: rgba(100, 100, 100, 0.2);
+  font-size: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.store .shop ul li a span {
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.store .shop ul li .btn {
+  padding: 15px 20px;
+}
+
+.store .shop1 {
+  background-image: url("../image/shop1-bg.png");
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.store .shop1 img {
+  width: 251px;
+}
+
+.store .shop1:hover {
+  background-image: url("../image/shop1-bg-on.png");
+}
+
+.store .shop2 {
+  background-image: url("../image/shop2-bg.png");
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.store .shop2 img {
+  width: 371px;
+}
+
+.store .shop2:hover {
+  background-image: url("../image/shop2-bg-on.png");
+}
+
+.store .shop3 {
+  background-image: url("../image/shop3-bg.png");
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.store .shop3 img {
+  width: 261px;
+}
+
+.store .shop3:hover {
+  background-image: url("../image/shop3-bg-on.png");
+}
+
+.store .shop4 {
+  background-image: url("../image/shop4-bg.png");
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.store .shop4 img {
+  width: 498px;
+}
+
+.store .shop4:hover {
+  background-image: url("../image/shop4-bg-on.png");
+}

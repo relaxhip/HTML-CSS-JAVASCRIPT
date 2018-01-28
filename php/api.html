@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url: "http://data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-000195-002",
+				success(e){
+					console.log(e);
+				},
+				error(){
+					console.log("error");
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

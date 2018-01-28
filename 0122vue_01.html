@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue/vue.js"></script>
+</head>
+<body>
+	<h1 id="app">
+		<a v-bind:href="url">yahoo</a><br>  <!--v-bind 單向綁定-->
+		<input type="text" v-model:value="msg">  <!-- v-model 雙向綁定 -->
+		<div>{{ msg }}</div>
+		<ul>
+			<li v-for="item in items">{{item}}</li>
+		</ul>
+	</h1>
+	
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				msg: "banana",
+				name: "ako",
+				url: "https://tw.yahoo.com",
+				items: ["html","css","js","jquery"]
+			}
+		});
+	</script>
+</body>
+</html>

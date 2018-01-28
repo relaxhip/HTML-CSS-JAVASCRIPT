@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlexBox</title>
+	<style>
+		.flexbox {
+			width: 400px;
+			height: 400px;
+			border: 2px solid #000;
+			display: flex;
+			position: relative;
+		}
+		.flexbox::before , .flexbox::after {
+			content:"";
+			display: block;
+			position: absolute; 
+		}
+		.flexbox::before{
+			height: 100%;
+			width: 1px;
+			background-color: red;
+			left: 50%;
+		}
+		.flexbox::after{
+			width: 100%;
+			height: 1px;
+			background-color: blue;
+			top: 50%;
+		}
+		.box {
+			width: 150px;
+			height: 150px;
+			border: 2px solid #000;
+			background-color: #9e2;
+		}
+		.flexbox1 {
+			display: flex;
+			justify-content: center;
+				 /* flex-start , flex-end,center , space-between , space-around , space-evenly */
+			align-items: center;
+				/* flex-start , flex-end , center , baseline , stretch */
+			flex-direction: row;
+				/* row , row-reverse , column , column-reverse */
+			flex-wrap: wrap;
+				/* no-wrap , wrap , wrap-reverse */
+			align-content: center;
+		}
+
+		.flexbox2 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.flexbox2 .left {
+			flex: 50%;
+			height: 100%;
+		}
+		.flexbox2 .mid {
+			flex: 30%;
+			height: 100%;
+		}
+		.flexbox2 .right {
+			flex: 20%;
+			height: 100%;
+		}
+		.left {
+			background-color: #451;
+		}
+		.mid {
+			background-color: #d01;
+		}
+		.right {
+			background-color: #a51;
+		}
+		.flexbox3 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		.flexbox3 .left {
+			flex: 400px;
+			height: 100%;
+			flex-shrink: 0;
+			/* flex-grow */
+		}
+		.flexbox3 .mid {
+			flex: 300px;
+			height: 100%;
+		}
+		.flexbox3 .right {
+			flex: 200px;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="flexbox flexbox1">
+		<div class="box">1</div>
+		<div class="box">2</div>			
+		<div class="box">3</div>
+		<div class="box">4</div>
+<!-- 		<div class="box">5</div>
+		<div class="box">6</div> -->
+	</div>
+	<div class="flexbox flexbox2">
+		<div class="left box">1</div>
+		<div class="mid box">2</div>			
+		<div class="right box">3</div>
+	</div>	
+	<div class="flexbox flexbox3">
+		<div class="left box">1</div>
+		<div class="mid box">2</div>			
+		<div class="right box">3</div>
+	</div>	
+</body>
+</html>

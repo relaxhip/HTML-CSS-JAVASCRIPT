@@ -1,0 +1,22 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+	.container
+		a.navbar-brand(href="index.html")
+			img(src="image/iroha-logo.png", alt="")
+		button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+			span.navbar-toggler-icon
+		#navbarSupportedContent.collapse.navbar-collapse
+			ul.navbar-nav.mr-auto
+				li.nav-item
+					a.nav-link(href="home.html") ホーム
+				li.nav-item
+					a.nav-link(href="menu.html") お品書き
+				li.nav-item
+					a.nav-link(href="about.html") いろはについって
+			ul.navbar-nav.ml-auto
+				li.nav-item.dropdown
+					a#navbarDropdown.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") 店舗検索
+					.dropdown-menu(aria-labelledby="navbarDropdown")
+						a.dropdown-item(href="#") 博多本店
+						a.dropdown-item(href="#") 大阪北新地店
+						a.dropdown-item(href="#") 大阪梅田店
+						a.dropdown-item(href="#") 大阪宗右衛門町

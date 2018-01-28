@@ -5,18 +5,18 @@
 	<title>1218 Q&A</title>
 	<script src="jquery-1.12.4.min.js"></script>
 	<script>
-		$(function(){
-			$("p").hide();
-			$("h2").click(function(){
-				$(this).next().toggle(600);
-			});
-		})
 		// $(function(){
 		// 	$("p").hide();
 		// 	$("h2").click(function(){
-		// 		$(this).next().stop().toggle(600);
+		// 		$(this).next().toggle(600);
 		// 	});
 		// })
+		$(function(){
+			$("p").hide();
+			$("h2").hover(function(){
+				$(this).next().stop().toggle(600);
+			});
+		})
 	</script>
 	<style>
 		h2{

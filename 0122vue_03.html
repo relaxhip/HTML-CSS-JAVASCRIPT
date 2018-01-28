@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="item in items" v-if="item.gender=='male'">{{item.name}}</li>
+		</ul>
+	</div>
+	<script>
+		new Vue({
+			el: "#app",
+			data:{
+				items: [
+					{name:"Venus",gender:"female"},
+					{name:"Hamilton",gender:"male"},
+					{name:"Louis",gender:"male"},
+					{name:"Virgenia",gender:"female"},
+					{name:"Mercedez",gender:"male"},
+					{name:"Angerlina",gender:"female"},
+				]
+			}
+		});
+	</script>
+</body>
+</html>
