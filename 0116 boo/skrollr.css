@@ -1,0 +1,18 @@
+.main-menu .img {
+  -skrollr-animation-name: slideIn;
+}
+
+@-skrollr-keyframes slideIn {
+  bottom-top {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+  center {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}

@@ -10,16 +10,17 @@
 	<div class="container">
 		<form action="javascript:;" method="post">
 			<div class="form-control">
-				姓名：<input type="text" name="username" id="username">
+				姓名：<input type="text" name="username" id="username" required>
 			</div>
 			<div class="form-control">
 				信箱：<input type="text" name="email" id="email">
 			</div>
 			<div class="form-control">
-				電話：<input type="text" name="phone" id="phone">
+				電話：<input type="text" name="phone" id="phone" required>
 			</div>
 			<input type="submit" value="新增">
 			<input type="button" value="取消" onclick="history.back()">
+			<input type="reset" value="清除內容">
 		</form>
 	</div>
 	<script>
